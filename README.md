@@ -2,6 +2,12 @@
 Collection of CSS tips
 
 
+## Selectors
+
+- `:has()` to check for matching siblings. [Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/:has)
+- `~`: [Subsequent-sibling combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator)
+- `:focus-within`. Matches an element if the element or any of its descendants are focused. [Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within)
+
 ## Positioning
 
 ### inset
@@ -32,6 +38,13 @@ Collection of CSS tips
 [Reference video](https://www.youtube.com/shorts/fO0XD75u2TI)
 
 
+## Sizing
+
+- `min`
+- `max`
+- `clamp`, combine `width`, `min-width` and `max-width` into a single command
+` minmax`
+
 ## Text
 
 ### Avoid wrapping text
@@ -39,12 +52,70 @@ Collection of CSS tips
 You can use `min-width: fit-content;` instead of `white-space: nowrap;`
 [Reference Video](https://www.youtube.com/shorts/4GR_lE1W09o)
 
+### Text Gradients
+
+![image](https://github.com/user-attachments/assets/22910d2e-9849-4717-a303-5aa7b6b87afd)
+
+Can't directly use `color: linear-gradient`.
+Instead we can use this tip:
+
+```css
+h1 {
+  background: linear-gradient(to right, red, blue); /* apply gradient to background */
+  background-clip: text; /* limit background painting area */
+  color: transparent; /* make text transparent */
+}
+```
+
+### Counters
+```css
+:root {
+  counter-reset: headings; /* headings is a name */
+}
+h2 {
+  counter-increment: headings; /* increment counter via `counter-increment` */
+}
+h2:before {
+  content: counter(headings); /* show the value of the counter prior to the element
+}
+```
+Allows styled counters:
+![image](https://github.com/user-attachments/assets/55700097-a7da-4fb0-bf33-aea6df18dc20)
+
+
 ## Transitions
 
 ### Transition to and from `display: none`
 
 [Youtube video](https://youtu.be/vmDEHAzj2XE?si=kXEVH8Xy8jIgY5Od)
 
+
+## Scrolling/Snapping
+
+Snap scrolling:
+
+```css
+.wrapper {
+  display: flex;
+  gap: 20px;
+  width: 300px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory; /* children need to define `scroll-snap-align`. Could also use `proximity` */
+  .card {
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 300px; /* needs to be the same size as the wrapper */
+  }
+}
+```
+
+![image](https://github.com/user-attachments/assets/0aa0eb26-a2f7-4efc-bc2b-1bfa1f452a6d)
+
+
+## Images
+
+- `backdrop-filter` to control how elements behind will display. Values include `blur`, `invert`, `opacity`, etc. [Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter)` 
 
 ## CSS Reset
 
