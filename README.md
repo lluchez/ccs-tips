@@ -82,6 +82,15 @@ h2:before {
 Allows styled counters:
 ![image](https://github.com/user-attachments/assets/55700097-a7da-4fb0-bf33-aea6df18dc20)
 
+### Auto increasing inputs (textarea)
+
+```css
+textarea {
+  field-sizing: content;
+}
+```
+
+[Official Doc](https://developer.mozilla.org/en-US/docs/Web/CSS/field-sizing). [Youtube Video](https://youtu.be/ElELqkwzcYM?si=8Q2p-yNNJyEup3s1)
 
 ## Transitions
 
@@ -115,7 +124,7 @@ Snap scrolling:
 
 ## Images
 
-- `backdrop-filter` to control how elements behind will display. Values include `blur`, `invert`, `opacity`, etc. [Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter)` 
+- `backdrop-filter` to control how elements behind will display. Values include `blur`, `invert`, `opacity`, etc. [Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter)
 
 ## CSS Reset
 
