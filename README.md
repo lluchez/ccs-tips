@@ -7,6 +7,7 @@ Collection of CSS tips
 - `:has()` to check for matching siblings. [Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/:has)
 - `~`: [Subsequent-sibling combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator)
 - `:focus-within`. Matches an element if the element or any of its descendants are focused. [Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within)
+- `:empty` to style component without any content. [Video](https://www.youtube.com/shorts/CE8hQIvTzGk)
 
 ## Positioning
 
