@@ -126,6 +126,7 @@ Snap scrolling:
 ## Images
 
 - `backdrop-filter` to control how elements behind will display. Values include `blur`, `invert`, `opacity`, etc. [Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter)
+- [simple hack for blurry image placeholders](https://leanrada.com/notes/css-only-lqip/). Example: `<img src="…" style="--lqip:350819">`
 
 ## CSS Reset
 
